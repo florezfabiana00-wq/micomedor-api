@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro</title>
+</head>
+<body>
+  <h2>Registro</h2>
+
+  <input type="text" id="usuario" placeholder="Usuario">
+  <input type="password" id="contrasena" placeholder="Contraseña">
+  <button onclick="enviar('registro')">Registrarse</button>
+
+  <p><a href="login.html">Ya tengo cuenta</a></p>
+
+  <script>
+  // Envía los datos al servicio web y muestra el mensaje de respuesta
+  async function enviar(accion) {
+    try {
+      const datos = new URLSearchParams({
+        accion,
+        usuario: document.getElementById("usuario").value,
+        contrasena: document.getElementById("contrasena").value
+      });
+      const r = await fetch("api/usuario", { method: "POST", body: datos });
+      const texto = await r.text();
+      try {
+        alert(JSON.parse(texto).mensaje);
+      } catch (e) {
+        alert("Error " + r.status + " del servidor");
+      }
+    } catch (e) {
+      alert("No se pudo conectar con el servidor: " + e);
+    }
+  }
+  </script>
+</body>
+</html>

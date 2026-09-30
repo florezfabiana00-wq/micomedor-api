@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar sesión</title>
+</head>
+<body>
+  <h2>Iniciar sesión</h2>
+  <input type="text" id="usuario" placeholder="Usuario">
+  <input type="password" id="contrasena" placeholder="Contraseña">
+  <button onclick="enviar('login')">Ingresar</button>
+  <p><a href="registro.html">Crear cuenta</a></p>
+
+  <script>
+// Envía los datos al servicio web y muestra el mensaje de respuesta
+async function enviar(accion) {
+  try {
+    const datos = new URLSearchParams({
+      accion,
+      usuario: document.getElementById("usuario").value,
+      contrasena: document.getElementById("contrasena").value
+    });
+    const r = await fetch("api/usuario", { method: "POST", body: datos });
+    const texto = await r.text();
+    try {
+      alert(JSON.parse(texto).mensaje);
+    } catch (e) {
+      alert("Error " + r.status + " del servidor");
+    }
+  } catch (e) {
+    alert("No se pudo conectar con el servidor: " + e);
+  }
+}
+</script>
+
+</body>
+</html>
