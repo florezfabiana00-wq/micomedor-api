@@ -1,0 +1,11 @@
+$kind: http-request
+description: ""
+url: http://localhost:9090/api/usuario
+method: POST
+body:
+  type: urlencoded
+  content:
+    accion: registro
+    usuario: noexiste
+    contrasena: "123455"
+order: 3000

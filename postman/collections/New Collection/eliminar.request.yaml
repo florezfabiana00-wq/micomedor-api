@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:8080/api/beneficiario
+method: DELETE
+body:
+  type: urlencoded
+  content:
+    id: "6"
+order: 2982

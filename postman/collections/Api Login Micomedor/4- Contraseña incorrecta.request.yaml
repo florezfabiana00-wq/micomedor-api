@@ -1,0 +1,12 @@
+$kind: http-request
+description: ""
+url: http://localhost:8080/api/beneficiario
+method: POST
+body:
+  type: urlencoded
+  content:
+    nombre: Juanito Peres
+    documento: "1234579654"
+    telefono: "3000000000"
+    edad: "55"
+order: 4000

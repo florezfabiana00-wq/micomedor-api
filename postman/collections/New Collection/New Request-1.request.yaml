@@ -1,0 +1,12 @@
+$kind: http-request
+name: New Request
+url: http://localhost:8080/api/beneficiario
+method: POST
+body:
+  type: urlencoded
+  content:
+    nombre: perdro
+    documento: "4866452345"
+    telefono: "23678412377"
+    eded: "35"
+order: 1000

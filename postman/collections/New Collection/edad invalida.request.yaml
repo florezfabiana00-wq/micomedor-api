@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:8080/api/beneficiario
+method: POST
+order: 4000
