@@ -1,0 +1,12 @@
+$kind: http-request
+description: ""
+url: http://localhost:9090/api/beneficiario
+method: POST
+body:
+  type: urlencoded
+  content:
+    nombre: sofia
+    documento: "12949392949"
+    telefono: "312456321"
+    edad: "55"
+order: 15000

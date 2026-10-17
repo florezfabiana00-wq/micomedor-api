@@ -1,0 +1,29 @@
+$kind: http-request
+name: actualizar
+description: ""
+url: http://localhost:9090/api/beneficiario?id=1&nombre=raul perez&documento=32145332&telefono=3214532433&edad=45
+method: PUT
+queryParams:
+  - key: id
+    value: "1"
+    disabled: false
+    description: ""
+  - key: nombre
+    value: raul perez
+    disabled: false
+    description: ""
+  - key: documento
+    value: "32145332"
+    disabled: false
+    description: ""
+  - key: telefono
+    value: "3214532433"
+    disabled: false
+    description: ""
+  - key: edad
+    value: "45"
+    disabled: false
+    description: ""
+body:
+  type: urlencoded
+order: 9000

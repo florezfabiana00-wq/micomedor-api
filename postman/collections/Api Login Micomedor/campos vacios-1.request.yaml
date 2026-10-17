@@ -1,0 +1,13 @@
+$kind: http-request
+name: campos vacios
+description: ""
+url: http://localhost:9090/api/beneficiario
+method: POST
+body:
+  type: urlencoded
+  content:
+    nombre: ""
+    documento: ""
+    telefono: ""
+    edad: ""
+order: 13000

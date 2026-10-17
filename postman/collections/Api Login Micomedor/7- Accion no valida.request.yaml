@@ -6,6 +6,6 @@ body:
   type: urlencoded
   content:
     accion: otra
-    usuario: kuromi
-    contrasena: "123455"
+    usuario: prueba001
+    contrasena: claveprueba123
 order: 1000

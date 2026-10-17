@@ -1,12 +1,11 @@
 $kind: http-request
 description: ""
-url: http://localhost:8080/api/beneficiario
+url: http://localhost:9090/api/usuario
 method: POST
 body:
   type: urlencoded
   content:
-    nombre: Juanito Peres
-    documento: "1234579654"
-    telefono: "3000000000"
-    edad: "55"
+    accion: login
+    usuario: prueba001
+    contrasena: otraclave
 order: 4000

@@ -6,6 +6,6 @@ body:
   type: urlencoded
   content:
     accion: registro
-    usuario: kuromi
-    contrasena: "123455"
-order: 6149
+    usuario: prueba001
+    contrasena: prueba123
+order: 6000

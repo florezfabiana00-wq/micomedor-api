@@ -1,0 +1,12 @@
+$kind: http-request
+description: ""
+url: http://localhost:9090/api/beneficiario?id=1
+method: DELETE
+queryParams:
+  - key: id
+    value: "1"
+    disabled: false
+    description: ""
+body:
+  type: urlencoded
+order: 7000
